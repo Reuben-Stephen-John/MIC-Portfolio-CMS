@@ -1,0 +1,613 @@
+.eventSearchContainer {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.topHeading {
+  flex-grow: 1;
+  color: #007bff;
+}
+
+.topHeading h3{
+  font-size: 4.5rem;
+}
+
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  background-color: #a6e1fa;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 18px;
+  font-size: 20px;
+
+}
+
+.buttonDivimg {
+  margin-left: 13px;
+  margin-right: 1px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hr{
+  background-color: #000000;
+  height: 1.7px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2px;
+  justify-items: center;
+  align-items: center;
+}
+
+  
+.bottomInnerDiv {
+  position:relative;
+  width: 95%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc; /* Add border */
+  box-shadow: 1px 1px 1px rgb(30, 64, 175); /* Add box shadow */
+  margin: 20px; /* Add margins */
+  background-color: #ebf9ff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.expanded-card {
+  /* Styles for the expanded card */
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 400px;
+  height: 600px; /* Set the desired height for the card */
+  background-color: #ebf9ffee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 2px rgb(30, 64, 175);
+  overflow: hidden; /* Hide content overflow */
+  backdrop-filter: blur(8px);
+}
+
+.scrollable-content {
+  /* Styles for the scrollable content */
+  height: 100%; /* Fill the card height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add some right padding to compensate for scrollbar */
+}
+
+.close-butt {
+  /* Styles for the close button */
+  position: absolute;
+  top: 1.5px;
+  right: 1.5px;
+  z-index: 1; /* Ensure the close button is above the content */
+  cursor: pointer;
+}
+
+.close-butt img {
+  /* Styles for the close button icon */
+  width: 25px;
+  height: 25px;
+}
+
+.expanded-img img {
+  /* Styles for the expanded card image */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.expanded-title {
+  /* Styles for the expanded card title */
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.expanded-desc {
+  /* Styles for the expanded card description */
+  margin-top: 10px;
+  color: #888;
+}
+
+.expanded-details {
+  /* Styles for the expanded card details */
+  margin-top: 20px;
+}
+
+.expanded-detail {
+  /* Styles for each detail item */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.expanded-detail span {
+  /* Styles for the detail icon */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.expanded-options {
+  /* Styles for the expanded card options */
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.expanded-options .editDiv,
+.expanded-options .deleteDiv {
+  /* Styles for the edit and delete options */
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.expanded-options .editDiv img:hover,
+.expanded-options .deleteDiv img:hover {
+  /* Styles for the edit and delete icons on hover */
+  animation: jiggle 0.4s infinite;
+}
+
+.expanded-options img {
+  /* Styles for the edit and delete icons */
+  width: 20px;
+  height: 20px;
+  
+}
+
+.imgDiv {
+  flex: 3;
+}
+
+.imgDiv img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 200px;
+}
+
+.contentDiv {
+  flex: 7;
+  padding-left: 20px;
+}
+
+.optionsDiv {
+  position: absolute;
+  top: 2rem; /* Add top position */
+  left: 75%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.editDiv,
+.deleteDiv {
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+.editDiv img,
+.deleteDiv img {
+  height: 20px;
+  margin-left: 2rem;
+}
+.optionsDiv .editDiv img:hover,
+.optionsDiv .deleteDiv img:hover{
+  transform: scale(1.2);
+  /* Add jiggle animation */
+  animation: jiggle 0.4s infinite; /* Add jiggle animation on hover */
+}
+
+.small-screen {
+  br {
+    display: block;
+    content: '';
+    margin-top: 10px;
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  40% {
+    transform: rotateZ(10deg);
+  }
+  60% {
+    transform: rotateZ(-10deg);
+  }
+  80% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1.6rem;
+}
+
+.m{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+.filter input{
+  max-width: 780px;
+  width: 93%;
+  margin-right: 50vw;
+}
+
+.submitButton {
+  background-color: #abe0f8;
+  color: #000000;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.submitButton:hover {
+  background-color: #695bff;
+  color: white;
+}
+
+.filter select{
+  width: 80%;
+  min-width: 135px;
+  max-width: 170px;
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.filter input::placeholder {
+  color: #807e7e;
+}
+
+.eventname {
+  margin-right: 1px;
+}
+.eventtype{
+  background-color: #abe0f8;
+  color: #000000;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 20px;
+  
+}
+.buttonDiv button {
+  background-color: #abe0f8;
+  padding: 5px 20px;
+  text-align: center;
+  width: 100%;
+  border-radius: 179px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.buttonDiv img {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+.memberListmiddle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  width: 70%;
+
+}
+.inputDiv {
+  display: flex;
+  align-items: center;
+}
+.inputDiv img {
+  height: 20px;
+  position: relative;
+  /* top:30px; */
+  left: 200px;
+  cursor: pointer;
+  width: 20px;
+}
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-b; */
+  justify-content: space-evenly;
+  width: 100%;
+}
+.middle input,
+select {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 6px;
+  background-color: #abe0f8;
+  padding: 6px;
+  cursor: pointer;
+}
+.middle select {
+  width: 150px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #abe0f8;
+}
+
+.Border {
+  border: 3px solid #000000;
+}
+.memberListbottom {
+  display: flex;
+  flex-wrap:wrap;
+
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  overflow-y: scroll;
+ 
+  flex: 7;
+  padding-top: 40px;
+ 
+}
+
+
+.contentDiv {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  
+  margin-left: 10px;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  justify-content: flex-start;
+}
+.contentDiv h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.contentDiv p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #000000;
+}
+.contentDivInner img {
+  height: 20px;
+}
+
+
+.memberDetailsInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    }
+
+.memberDescription{
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    justify-content: flex-start;
+}
+.details {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* background-color: rebeccapurple; */
+}
+
+.form-group{
+  padding-right: 0;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint value as needed */
+  .bottom {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+  }
+  .imgDiv {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imgDiv img {
+    max-width: 200px;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10%;
+  }
+  .bottomInnerDiv {
+    flex-direction: column;
+  }
+  
+  .contentDiv {
+    flex: 7;
+    padding-left: 20px;
+    margin: 2rem;
+  }
+  .optionsDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;  
+    flex: 1;
+    margin-right: 2rem;
+  }
+  .editDiv,
+.deleteDiv {
+  cursor: pointer;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+}
+
+.editDiv img,
+.deleteDiv img {
+  height: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.filter select{
+  width: 100%;
+  font-size: 20px;
+  padding: 11px;
+}
+
+.submitButton{
+  font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 7px;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+  
+  .filter {
+    flex-direction: column;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .filter select{
+    padding: 11px;
+    font-size: 20px;
+  }
+
+  .m{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .submitButton {
+    margin-left: 0;
+    margin-top: 20px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    font-size: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .topHeading {
+    margin-bottom: 1rem;
+  }
+
+  .buttonDiv {
+    margin-top: 1rem;
+  }
+
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  font-size: 16px;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border:none;
+  background-color: #abe0f8;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.pagination button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pagination button:hover {
+  background-color: #695bff;
+  color: white;
+}
+
+
+@media screen and (min-width:1000px){
+  .filter select{
+    padding: 13.5px;
+  }
+
+  .submitButton{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width:1400px){
+  .filter select{
+    width: 170px;
+    margin-left: 0;
+  }
+
+  .filter input{
+    margin-right: 87rem;
+  }
+}

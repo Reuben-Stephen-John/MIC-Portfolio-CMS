@@ -1,0 +1,155 @@
+.events-container{
+    min-height: 100vh;
+}
+
+.events-title{
+    padding-top: 28px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.events-list{
+    padding: 30px 50px 30px 50px;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.event-card{
+    cursor: pointer;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+    height: 300px;
+    width: 260px;
+    padding: 15px;
+    align-items: center;
+    margin: 7px;
+    border-radius: 20%;
+    transition: 0.5s;
+}
+
+.event-card:hover{
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.5);
+    
+}
+
+.event-title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.event-img-small{
+    width: 200px;
+    height: 220px;
+    margin: auto;
+}
+
+.event-img-small > img{
+    width: 200px;
+    height: 220px;
+    border-radius: 20%;
+}
+
+
+.extended-card{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 0.2);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+ .extended-button-container, .extended-date, .extended-venue, .extended-fee{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 2rem;
+}
+.extended-time{
+    padding-top: 5px;
+    padding-bottom: 2px;
+    font-size: 2rem;
+}
+
+.close-button{
+    position: relative;
+    left: 95%;
+    top: -40%;
+}
+
+.close-button > span > img{
+    height: 20px;
+    width: 20px;
+}
+
+.extended-button{
+    background: blueviolet;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.extended-img{
+    height: 50vh;
+    margin: 30px;
+}
+
+.extended-img > img{
+    height: 50vh;
+    aspect-ratio: 1;
+}
+.extended-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    width: 50%;
+    margin: auto;
+    padding-right: 30px;
+}
+.extended-title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+.extended-desc{
+    text-align: center;
+    font-size: 2rem;
+}
+.extended-mobile-img{
+    display: none;
+    width: 60%;
+}
+
+
+@media only screen and (max-width: 768px){
+    .extended-img{
+        display: none;
+    }
+    .extended-mobile-img{
+        display: block;
+    }
+    .extended-card{
+        width: 90%;
+        height: 900px;
+    }
+    .extended-content{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .extended-desc{
+        padding: 20px;
+    }
+    .close-button{
+        
+        left: 91%;
+        top: -45%;
+    }
+}
