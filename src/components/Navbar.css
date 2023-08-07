@@ -1,0 +1,266 @@
+.navbar-logo > img {
+  width: 38rem;
+  height: 5.332rem;
+}
+
+.navbar {
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  margin-left: 0px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  font-size: 1.8rem;
+  font-family: "Bold";
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 2.5rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #000;
+  transition: all 0.25s ease-out;
+}
+
+.menu-icon {
+  display: none;
+}
+.nav-auth-logo > img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.nav-auth-signin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.nav-auth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #daf4ff;
+  z-index: 9999;
+}
+
+.nav-auth::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+
+}
+
+.nav-auth-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.nav-auth-logo {
+  margin-left: 0px;
+}
+
+.navbar-auth-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.navbar-auth-item {
+  height: 80px;
+}
+
+.nav-auth-text {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  color: #a200ff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 2.5rem;
+  height: 100%;
+}
+
+.nav-auth-text:hover {
+  border-bottom: 4px solid #ffffff;
+  transition: all 0.1s ease-out;
+}
+
+.nav-auth-inside-text {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  color: #0066ff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 2.5rem;
+  height: 100%;
+}
+
+.nav-auth-inside-text:hover {
+  border-bottom: 4px solid #ae00ff;
+  transition: all 0.1s ease-out;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-logo > img {
+    width: 25rem;
+    height: 3.504rem;
+  }
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: rgba(0, 0, 0, 0.688);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    color: rgb(202, 202, 202);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .nav-links:hover {
+    border-bottom: none;
+    color: rgb(255, 255, 255);
+    transform: scale(1.15);
+  }
+
+  .navbar-logo {
+    margin-left: 2px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1560px) {
+
+  .navbar-logo {
+    margin-left: 2px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .nav-auth-logo > img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .navbar-auth-menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .navbar-auth-menu.active {
+    background: rgba(255, 255, 255, 0.863);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-auth-logo {
+    margin-left: 2px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-auth-logo > img {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    .nav-auth-container{
+      width: 100%;
+      margin-left: 10%;
+    }
+}

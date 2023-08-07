@@ -1,0 +1,130 @@
+.eventpage {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 90px;
+  margin-left: 10vw; /* Add margin to the left to align with the navbar */
+  height: 100%; /* Set height to fill the available space */
+}
+
+.h1 {
+  color: rgb(7, 7, 138);
+  font-size: 5rem;
+  margin-bottom: 20px;
+  margin-top: 20px; /* Add margin to the top of the h1 tag */
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box1 {
+  color: rgb(7, 7, 138);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20rem /* Add margin between the columns */
+}
+
+
+.maininput-container {
+  width: 35vw;
+  margin-bottom: 20px; /* Add margin at the bottom of each input container */
+}
+
+.main-container > label {
+  
+  font-weight: bold;
+}
+
+.banner2 {
+  display: none;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="url"],
+input[type="tel"],
+input[type="file"] {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  background-color: #b7e4f7;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 10rem;
+}
+
+.button-back,
+button.button-save {
+  width: 20rem;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-right: 10rem;
+  background-color: #b7e4f7;
+  color: rgb(7, 7, 138);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.button-back:hover,
+.button-save:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width:890px) {
+  .box1{
+    margin-right: 10rem
+  }
+  
+}
+
+@media screen and (max-width:650px) {
+  .button-back,
+button.button-save{
+  margin-right: 5rem;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .box1 {
+    margin-right: 0;
+  }
+  
+  .maininput-container{
+    width: 80vw;
+  }
+
+  .banner1 {
+    display: none;
+  }
+
+  .banner2 {
+    display: contents;
+  }
+
+  .buttons-container{
+    width: 80vw;
+  }
+}
